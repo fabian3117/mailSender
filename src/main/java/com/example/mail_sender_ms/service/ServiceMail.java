@@ -55,7 +55,7 @@ public class ServiceMail {
         MimeMessageHelper helper = new MimeMessageHelper(Mensaje, true);
         helper.setFrom(remitente);
         helper.setTo(correo.getDestino());
-        helper.setSubject("subject");
+        helper.setSubject(correo.getAsunto());
         helper.setText(correo.getTexto());
      //   helper.setText(content, true);
         javaMailSender.send(Mensaje);

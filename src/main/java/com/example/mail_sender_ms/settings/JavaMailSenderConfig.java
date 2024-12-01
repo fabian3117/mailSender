@@ -30,26 +30,6 @@ public class JavaMailSenderConfig {
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-
-
-
-/*
-        // Replace with your actual SMTP server details
-        mailSender.setHost("smtp.gmail.com");
-        mailSender.setPort(587);
-        mailSender.setUsername("fedee317@gmail.com");
-        mailSender.setPassword("ckmigqaxlelzhgkd");
-
-        // Set other properties as needed, e.g.,
-        mailSender.setProtocol("smtp");
-        mailSender.setDefaultEncoding("UTF-8");
-
-        Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-
-
- */
         return mailSender;
     }
 
