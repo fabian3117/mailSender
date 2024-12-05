@@ -37,10 +37,7 @@ public class KafkaConsumerSetting {
         /*props.put(JsonDeserializer.USE_TYPE_INFO_HEADERS,false);
         props.put(JsonDeserializer.VALUE_DEFAULT_TYPE, "com.example.mail_sender_ms.dto.BodyMail");
         props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
-
-
          */
-
 
 //        return new DefaultKafkaConsumerFactory<>(props);
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new CustomBodyMailDeserializer());
