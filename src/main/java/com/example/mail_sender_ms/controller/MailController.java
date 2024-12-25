@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
+import java.util.List;
 
 @Controller("/")
 @Slf4j
@@ -23,5 +24,10 @@ public class MailController {
     public void correo(@NonNull @RequestBody BodyMail bodyMail) throws MessagingException {
 
         serviceMail.sendCorreo(bodyMail);
+    }
+    @GetMapping("/correos")
+    @ResponseBody
+    public List<BodyMail> getAllCorreos() {
+        return serviceMail.getAllCorreos();
     }
 }
